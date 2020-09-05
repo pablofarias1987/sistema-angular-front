@@ -1,0 +1,25 @@
+<div class="col-lg-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            Subir Pelicula
+        </div>
+        <div class="card-body">
+            <form (submit)="uploadJuego(title, description)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Juego Title" #title required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="2" class="form-control" placeholder="Juego's Description" required #description></textarea>
+                </div>
+
+                <input type="file" class="d-none" (change)="onJuegoSelected($event)" #juegoInput>
+                <img [src]="juegoSelected || '../assets/no-image.png'" class="img-fluid" alt="No image"
+                    (click)="juegoInput.click()">
+
+                <button class="btn btn-primary btn-block">
+                    Upload
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+.card-juego {
+    cursor: pointer;
+}
+
+.card-juego:hover {
+    border: 1px solid #333;
+}

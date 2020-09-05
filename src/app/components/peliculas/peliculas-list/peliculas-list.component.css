@@ -1,0 +1,7 @@
+.card-pelicula {
+    cursor: pointer;
+}
+
+.card-pelicula:hover {
+    border: 1px solid #333;
+}

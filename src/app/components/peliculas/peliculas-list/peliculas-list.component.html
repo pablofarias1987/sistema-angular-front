@@ -1,0 +1,23 @@
+<div class="container">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="#">Capitulos</a></li>
+        <li class="breadcrumb-item active">Peliculas</li>
+        <li class="breadcrumb-item"><a routerLink="#">Ovas</a></li>
+        <li class="breadcrumb-item"><a  routerLink="/juegos">Juegos</a></li>
+        <li class="breadcrumb-item"><a  routerLink="#">Personajes</a></li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let pelicula of peliculas">
+        <div class="card card-pelicula" (click)="selectedCard(pelicula._id)">
+            <div class="card-header">
+                {{pelicula.title}}
+            </div>
+            <img [src]="'http://localhost:4000/' + pelicula.imagePath" class="img-card-top w-100">
+            <div class="card-body">
+                <p>{{pelicula.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
