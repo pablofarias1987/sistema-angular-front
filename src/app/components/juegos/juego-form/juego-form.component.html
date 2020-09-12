@@ -1,15 +1,15 @@
 <div class="col-lg-4 mx-auto">
     <div class="card">
         <div class="card-header">
-            Subir Pelicula
+            Upload Game
         </div>
         <div class="card-body">
             <form (submit)="uploadJuego(title, description)">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Juego Title" #title required>
+                    <input type="text" class="form-control" placeholder="Game Title" #title required>
                 </div>
                 <div class="form-group">
-                    <textarea rows="2" class="form-control" placeholder="Juego's Description" required #description></textarea>
+                    <textarea rows="2" class="form-control" placeholder="Game Description" required #description></textarea>
                 </div>
 
                 <input type="file" class="d-none" (change)="onJuegoSelected($event)" #juegoInput>
